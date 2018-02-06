@@ -8,6 +8,7 @@ void ofApp::setup(){
     
     // -------- loading shader with AutoReloadedShader---------
     ambientShader.load("Shaders/c");
+    // interactionShader.load("_shaderrname_");
     
     //FBO setup
     
@@ -58,11 +59,22 @@ void ofApp::draw(){
     // ofRect(0,0,ofGetWidth(),ofGetHeight());
     // shader.end();
     
-//    interactionShader.begin();
-//    {
+// --------- Building fbo's with shaders dawn inside them --------
 //
+//    interactionFbo.begin();
+//    {
+//        ofClear(0, 0, 0, 0);
+//            interactionShader.begin();
+//            {
+//                interactionShader.setUniform1f("u_time",          ofGetElapsedTimef());
+//                interactionShader.setUniform2f("u-resolution", ofGetWidth(),ofGetHeight());
+//                ofSetColor(255,255,255);
+//                ofFill();
+//                ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+//            }
+//            interactionShader.end();
 //    }
-//    interactionShader.end();
+//    interactionFbo.end();
 //
 //
 //

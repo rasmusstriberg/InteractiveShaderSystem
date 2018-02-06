@@ -36,7 +36,6 @@ class ofApp : public ofBaseApp{
     
     // Init fbo
     ofFbo mainFbo;
-    ofFbo ambientFbo;
     ofFbo interactionFbo;
     
     
